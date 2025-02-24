@@ -1,14 +1,33 @@
 #include <iostream>
+#include <vector>
+#include <numeric>
+#include <string>
 
 using namespace std;
 
 int main(){
-    string str{};
-    cout << "\nPlease enter a string: ";
-    cin >> str;
+    string input{};
+    cout << "\nPlease enter any input: ";
+    getline(cin, input);
+    size_t input_length = input.length();
     
-for(char c : str){
-    cout << c << endl;
+    for (size_t i = 0; i < input_length; ++i) {
+        // Print empty rows for pyramid alignment
+        
+        
+        // Print the left half of the pyramid
+        for (size_t j = 0; j <= i; ++j) {
+            cout << input[j];
+        }
+
+        // Print the right half of the pyramid
+        for (int j = i - 1; j >= 0; --j) {
+            cout << input[j];
+        }
+
+        // Move to the next line
+        cout << endl;
     }
+
     return 0;
     }
