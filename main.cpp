@@ -13,7 +13,7 @@ int main(){
     
     for (size_t i = 0; i < input_length; ++i) {
         // Print empty rows for pyramid alignment
-        
+        cout << string(input_length - i - 1, ' ');
         
         // Print the left half of the pyramid
         for (size_t j = 0; j <= i; ++j) {
